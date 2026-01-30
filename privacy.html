@@ -6,60 +6,59 @@
     <title>로또몽 개인정보처리방침</title>
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.6; margin: 20px; max-width: 800px; margin: auto; }
-        h1, h2 { color: #333; }
-        h1 { text-align: center; }
+        h1, h2 { color: #333; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        h1 { text-align: center; border-bottom: none; }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
         th { background-color: #f2f2f2; }
+        .highlight { font-weight: bold; color: #d32f2f; }
     </style>
 </head>
 <body>
     <h1>로또몽 개인정보처리방침</h1>
-    <p><strong>로또몽(이하 '본 앱')은 사용자 개인정보의 최소 수집 원칙을 준수하며, 푸시 알림 전송을 위한 Firebase Cloud Messaging(FCM) 등록 토큰만 익명으로 수집합니다.</strong></p>
-    <p><strong>서버가 없으며 네이티브 앱으로 운영되어 다른 개인정보는 수집되지 않습니다.</strong></p>
+    <p><strong>로또몽(이하 '본 앱')은 사용자 개인정보의 최소 수집 원칙을 준수하며, 서비스 제공을 위한 필수 데이터만 익명으로 처리합니다.</strong></p>
+    <p>본 앱은 서버를 별도로 운영하지 않는 네이티브 앱이며, 아래 명시된 항목 외의 개인정보는 수집하지 않습니다.</p>
 
-    <h2>수집하는 개인정보 항목</h2>
+    <h2>1. 수집하는 개인정보 항목 및 방법</h2>
     <ul>
-        <li><strong>수집 항목</strong>: Firebase 푸시 토큰 (FCM Instance ID)만 수집.</li>
-        <li><strong>수집 방법</strong>: 앱 실행 시 Firebase SDK를 통해 자동 생성 및 저장.</li>
-        <li><strong>수집하지 않는 정보</strong>: 이름, 이메일, 전화번호, 위치, 기기 식별자 등 개인 식별 정보는 전혀 수집하지 않음.</li>
+        <li><strong>수집 항목 (알림)</strong>: Firebase 푸시 토큰 (FCM Instance ID)</li>
+        <li><strong>수집 항목 (광고)</strong>: 광고 식별자 (ADID/IDFA) 및 기기 정보</li>
+        <li><strong>수집 방법</strong>: 앱 실행 시 Firebase 및 Google AdMob SDK를 통해 자동 생성 및 수집.</li>
+        <li><strong>미수집 정보</strong>: 이름, 이메일, 전화번호, 주소 등 개인을 직접 식별할 수 있는 정보는 절대 수집하지 않음.</li>
     </ul>
 
-    <h2>개인정보의 이용 목적</h2>
-    <p>푸시 토큰은 오직 푸시 알림 전송(로또 결과 업데이트 등)에만 사용되며, 익명 처리되어 개인을 식별할 수 없습니다.</p>
-    <p>이용 목적이 달성되면 즉시 삭제되거나 앱 삭제 시 함께 제거됩니다.</p>
-    <p>제3자 제공이나 공유는 없습니다.</p>
+    <h2>2. 개인정보의 이용 목적</h2>
+    <ul>
+        <li><strong>푸시 알림</strong>: 로또 결과 업데이트 및 주요 공지 전송.</li>
+        <li><strong>광고 제공</strong>: 앱 내 리워드 광고 제공 및 맞춤형 광고 서비스 최적화(Google AdMob).</li>
+        <li>수집된 정보는 익명으로 처리되어 개인을 식별할 수 없으며, 마케팅 용도로 제3자에게 매매되지 않습니다.</li>
+    </ul>
 
-    <h2>개인정보의 보유 및 파기</h2>
+    <h2>3. 개인정보의 보유 및 파기</h2>
     <table>
-        <tr><th>항목</th><th>내용</th></tr>
-        <tr><td>보유 기간</td><td>앱 설치 기간 동안만 로컬 기기에 저장. 앱 삭제 또는 토큰 갱신 시 자동 파기.</td></tr>
-        <tr><td>파기 방법</td><td>Firebase SDK를 통해 토큰 무효화 및 삭제.</td></tr>
-        <tr><td>파기 절차</td><td>수집 목적 달성 시 지체 없이 파기.</td></tr>
+        <tr><th>구분</th><th>보유 및 파기 내용</th></tr>
+        <tr><td>보유 기간</td><td>앱 설치 기간 동안만 유효하며, 앱 삭제 또는 토큰/식별자 초기화 시 즉시 파기.</td></tr>
+        <tr><td>파기 방법</td><td>관련 SDK(Firebase/AdMob)의 무효화 절차에 따라 데이터 삭제.</td></tr>
+        <tr><td>파기 절차</td><td>이용 목적 달성 시 혹은 사용자 요청 시 지체 없이 파기.</td></tr>
     </table>
 
-    <h2>개인정보의 안전성 확보 조치</h2>
-    <p>Firebase의 HTTPS 암호화 및 보안 표준을 활용하며, 네이티브 앱으로 서버 미운영으로 추가 위험 없음.</p>
-    <p>외부 접근 차단 및 최소 수집으로 보호.</p>
-    <p>개인정보침해 발생 시 즉시 통보.</p>
+    <h2>4. 개인정보의 안전성 확보 조치</h2>
+    <p>Google의 표준 보안 가이드라인 및 HTTPS 암호화 통신을 준수하여 데이터를 보호합니다. 별도의 외부 서버를 운영하지 않아 서버 해킹 등에 의한 유출 위험이 없습니다.</p>
   
-    <h2>사용자 권리와 행사 방법</h2>
-    <p>푸시 알림 동의를 철회하려면 안드로이드 설정 &gt; 앱 &gt; 로또몽 &gt; 알림 권한 해제하세요. 토큰이 자동 재생성 또는 무효화됩니다.</p>
-    <p>추가 문의나 삭제 요청: wongi060@gmail.com</p>
+    <h2>5. 사용자 권리와 행사 방법</h2>
+    <p>사용자는 언제든지 아래의 방법으로 정보 수집을 거부할 수 있습니다.</p>
+    <ul>
+        <li><strong>푸시 알림</strong>: 안드로이드 설정 > 앱 > 로또몽 > 알림 권한 해제</li>
+        <li><strong>광고 식별자</strong>: 안드로이드 설정 > 개인정보 보호 > 광고 > 광고 ID 재설정 또는 맞춤설정 해제</li>
+        <li><strong>문의처</strong>: wongi060@gmail.com</li>
+    </ul>
 
-
-    <h2>개인정보 보호책임자</h2>
+    <h2>6. 개인정보 보호책임자</h2>
     <ul>
         <li><strong>책임자</strong>: 몽기 개발자</li>
         <li><strong>연락처</strong>: wongi060@gmail.com</li>
-        <li><strong>문의 시간</strong>: 평일 9시~18시.</li>
+        <li><strong>문의 시간</strong>: 평일 09:00 ~ 18:00</li>
     </ul>
 
-    <p><strong>본 방침은 2026년 1월 31일부터 적용되며, 변경 시 앱 내 공지.</strong></p>
-    <p><strong>Google Play 정책 준수 확인: 활성 HTML 페이지, 공개 접근 가능.</strong></p>
-
-    <footer style="margin-top: 40px; text-align: center; color: #666; font-size: 0.9em;">
-        © 2026 로또몽. All rights reserved.
-    </footer>
-</body>
-</html>
+    <p><strong>공고일자: 2026년 1월 31일</strong><br>
+    <strong>시행일자: 2026년 1월
